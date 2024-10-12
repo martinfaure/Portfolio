@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+}
+
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  width: 70%;
+  
+}
+
+.navbar-title {
+  color: white;
+  margin: 0;
+}
+
+.navbar-buttons {
+  display: flex;
+  font-size: 140%;
+}
+
+.navbar-button {
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 12px;
+
+}
+
+.navbar-buttons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font: bold 1.5rem sans-serif;
+  text-transform: uppercase;
+  color: grey;
+}
+.navbar-buttons .navbar-button {
+  padding: 0 .5em .25em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+}
+.navbar-buttons .navbar-button:hover {
+  color: #fff;
+}
+.navbar-buttons .navbar-button:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+  background: #0f8ff8; /* the color */
+  scale: 0 1;
+  transition: .3s, translate 0s .3s;
+}
+.navbar-buttons:hover .navbar-button:before {
+  scale: 1;
+}
+.navbar-buttons .navbar-button:hover:before {
+  translate: 0;
+  transition: .3s;
+}
+.navbar-buttons:hover .navbar-button:has(~ li:hover):before {
+  translate: 100% 0;
+  transition: .2s .2s,scale 0s .4s;
+}
+.navbar-buttons:hover .navbar-button:hover ~ .navbar-button:before {
+  translate: -100% 0;
+  transition: .2s .2s,scale 0s .4s;
+}
+
+
+hr{
+  position: fixed;
+  top: 0;
+  margin-top: 5%;
+  width: 75%;
+
+}
+
+main{
+  display: flex;
+  width: 70%;
+  height: 20%;
+}
+
+.title{
+  display: flex;
+  left: 0;
+  margin-left: 15%;
+  color: white;
+  font-size: 400%;
+  margin-top: 15%;
+  color: #FFFFFF;
+text-shadow: 0 0 5px #02457a, 0 0 10px #02457a, 0 0 15px #02457a, 0 0 20px #02457a, 0 0 30px #02457a, 0 0 40px #02457a, 0 0 55px #02457a, 0 0 75px #02457a;
+color: #FFFFFF;
+
+
+}
+
+.prespar{
+  border: solid white 2px;
+  padding: 3%;
+  width: 30%;
+  height: 60%;
+  color: white;
+  margin-top: 15%;
+  margin-left: 20%;
+  font-size: 135%;
+}
+
+
+.prespar:hover{
+  background-color: #02457a;
+}
+
+.profile-picture {
+position: absolute;
+left: 0;
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 2px solid white;
+  margin-top: 400px; 
+  margin-left: 450px;
+}
+
+
+@media (max-width: 600px){
+  .title{
+    margin-top: 40%;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prespar{
+    width: 75%;
+    font-size: 120%;
+  }
+
+}
+
